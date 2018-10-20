@@ -15,4 +15,12 @@ public class ProjectTaskService {
     public ProjectTask saveORupdateProjectTask(ProjectTask projectTask){
         return projectTaskRepository.save(projectTask);
     }
+
+    public ProjectTask findById(Long id){
+        return projectTaskRepository.getById(id);
+    }
+
+    public Iterable<ProjectTask> findAll(){
+        return projectTaskRepository.findAll();
+    }
 }

@@ -41,5 +41,16 @@ public class ProjectTaskController {
         return new ResponseEntity<ProjectTask>(newTask, HttpStatus.CREATED);
     }
 
+    @GetMapping("/{pt_id}")
+    public ResponseEntity<?> getPTById(@PathVariable Long pt_id){
+        ProjectTask projectTask = projectTaskService.findById(pt_id);
+        return new ResponseEntity<ProjectTask>(projectTask, HttpStatus.OK);
+    }
 
+    //Get a list of project tasks
+
+    @GetMapping("/all")
+    public Iterable<ProjectTask> getAllPTs(){
+        return projectTaskService.findAll();
+    }
 }
