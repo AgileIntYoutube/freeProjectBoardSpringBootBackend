@@ -23,4 +23,10 @@ public class ProjectTaskService {
     public Iterable<ProjectTask> findAll(){
         return projectTaskRepository.findAll();
     }
+
+    public void delete(Long id){
+        ProjectTask projectTask = projectTaskRepository.getById(id);
+
+        projectTaskRepository.delete(projectTask);
+    }
 }

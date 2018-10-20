@@ -53,4 +53,13 @@ public class ProjectTaskController {
     public Iterable<ProjectTask> getAllPTs(){
         return projectTaskService.findAll();
     }
+
+    // We are not writing a single line of code!!
+
+    @DeleteMapping("/{pt_id}")
+    public ResponseEntity<?> deleteProject(@PathVariable Long pt_id){
+        projectTaskService.delete(pt_id);
+
+        return new ResponseEntity<String>("Project Task with ID: "+pt_id+" was deleted", HttpStatus.OK);
+    }
 }
