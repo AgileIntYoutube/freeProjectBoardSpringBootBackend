@@ -1,6 +1,6 @@
 # freeProjectBoard
 
-Scope:
+In Scope:<br>
 API for CRUD Operations for ProjectTasks
 React/Redux Front End to support CRUD Operations for ProjectTasks
 
